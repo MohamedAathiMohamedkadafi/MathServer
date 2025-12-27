@@ -1,0 +1,61 @@
+<html>
+<head>
+    <title>Fuel Efficency</title>
+    <style>
+        body {
+            background-color: rgb(2, 2, 31);
+            
+            font-family:century;
+
+            font-size: 40px
+}
+        
+        .box {
+            width: 800px;
+            margin: auto;
+            margin-top: 140px;
+            padding: 150px;
+            background-color: #ff0048;
+            color: rgb(0, 0, 0);
+            border: 4px pointer rgb(139, 24, 181);
+            text-align: center;
+            font-size: 19px
+            
+            
+        }
+        input {
+            padding: 4px;
+            margin: 7px;
+            font-size: 10px
+        }
+        .btn {
+            padding: 7px 16px;
+            cursor: pointer;
+            font-size: 10px
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <h1>Fuel Efficency Calculator </h1>
+        <h2>Mohamed Aathil M (25008235)<h2>
+        
+
+        <form method="POST">
+            {% csrf_token %}
+            Distance(km):
+            <input type="text" name="Distance" vaclue="{{ km }}"><br>
+
+            fuel consumed(liters):
+            <input type="text" name="fuel" value="{{ lt }}"><br>
+
+            <button class="btn" type="submit">Calculate</button><br><br>
+
+            mileage:
+            <input type="text" value="{{mileage }}" readonly> km/lt
+            
+        </form>
+    </div>
+</body>
+</html>
